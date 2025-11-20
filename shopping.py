@@ -15,10 +15,10 @@ app = FastAPI()
 GCS_BUCKET_NAME = "clothes_shop"
 GCS_CREDENTIALS_FILE = "twilio-440407-9049c36e31b5.json"
 PRODUCT_JSON_PATH = "footwear_metadata.json"
-client = OpenAI(api_key="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")
-TWILIO_SID = "ACc3b466139e779e862c4f545bd6e19d94"
-TWILIO_AUTH = "0587b58274800f397550c85b621ab921"
-TWILIO_NUMBER = "whatsapp:+919319837618"
+client = OpenAI(api_key="#OpenAI Api Key")
+TWILIO_SID = "#Twilio SID"
+TWILIO_AUTH = "#Twilio Auth"
+TWILIO_NUMBER = "whatsapp:#whatsapp Num"
 embedded_json_path="footwear_with_embeddings.json"
 # === Google Cloud Storage Setup ===
 storage_client = storage.Client.from_service_account_json(GCS_CREDENTIALS_FILE)
@@ -650,3 +650,4 @@ async def cleanup_inactive_sessions():
                 save_session_to_gcs(phone)
             await asyncio.sleep(60)
     asyncio.create_task(periodic_cleanup())
+
