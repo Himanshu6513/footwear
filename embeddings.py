@@ -11,9 +11,10 @@ def create_product_embeddings(input_path, output_path, api_key, model="text-embe
     json.dump(data, open(output_path, 'w'), indent=2)
 
 
-api_key = "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"
+api_key = "#Your OpenAI API Key"
 create_product_embeddings(
     input_path='/content/footwear_metadata.json',
     output_path='/content/footwear_with_embeddings.json',
     api_key=api_key
+
 )
